@@ -1,7 +1,7 @@
 import react from 'react';
 import { Link } from 'react-router-dom';
 import productos from './../js/productos';
-
+import { FiFilter } from 'react-icons/fi'
 //CSS
 import catalogStyle from './../breadcumbs/css/catalog.css';
 //JS
@@ -31,7 +31,7 @@ const ProductCatalog = () => {
         <div className="catalog-wrapper" id='content'>
             <h1 className='catalog-title'>Catalogo </h1>
             <div className="filter-mobile">
-                <button onClick={ShowFilters}> Filtrar catalogo </button>
+                <button onClick={ShowFilters}><FiFilter /> Filtrar catalogo </button>
             </div>
             <div className="filter sidebar">
                 <div className="sidebar-wrapper">
@@ -61,8 +61,8 @@ const ProductCatalog = () => {
                         <div className="menu-mobile side-bar" id="menuMobile">
                             <div className="mobile-wrapper">
                                 <div className='mobile-links'>
-                                    <button data="techado" onClick={(filters)}>Techados </button>
-                                    <button data="hogar" onClick={(filters)}>Hogar </button>
+                                    <button data="techado" onClick={(filters)}>Mesas </button>
+                                    <button data="hogar" onClick={(filters)}>Sillas </button>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +79,7 @@ const ProductCatalog = () => {
                                     <img src={producto.img1} alt="img-product" />
                                     <div className="catalog-info">
                                         <Link to={`/productos/${producto.id}`}>
-                                            {producto.category}
+                                            {producto.title}
                                         </Link>
                                         <span>{producto.description}</span>
                                     </div>

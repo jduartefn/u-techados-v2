@@ -9,16 +9,17 @@ const MiddleBanners = () => {
         <Swiper spaceBetween={25}
             modules={[Navigation]}
             navigation
+            
             breakpoints={{
                 1920: {
                     slidesPerView: 2
                 },
                 640: {
                     width: 640,
-                    slidesPerView: 1.5,
+                    slidesPerView: 2,
                 },
-                768: {
-                    width: 420,
+                320: {
+                    width: 320,
                     slidesPerView: 1.5,
                 },
             }}

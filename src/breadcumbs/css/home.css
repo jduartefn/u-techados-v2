@@ -172,7 +172,6 @@ img {
     padding: 5%;
     border-radius: 5px;
     background: var(--white);
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
 /* Swiper pagination */
@@ -201,6 +200,10 @@ span.swiper-pagination-bullet {
 }
 
 @media (min-width:1024px) {
+    .principal-banner .principal-first .info {
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+    
     .screw {
         background: var(--neutral);
         height: 100%;
@@ -297,6 +300,27 @@ span.swiper-pagination-bullet {
     .sub-info b {
         font-size:30px;
     }
+    .home-wrapper {
+        max-width:100%;
+        margin:10px;    
+    }
+    .middle-info {
+        padding:7px 0;
+    }
+}
+
+@media (max-width:640px){
+    .product-list a {
+        font-size:1em;
+    }
+    .product-list span {
+        font-size:15px;
+    }
+    .middle-info span,
+    .middle-info a {
+        font-size:14px;
+    }
+ 
 }
 
 

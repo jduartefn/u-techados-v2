@@ -6,7 +6,7 @@ import React, { useEffect } from 'react';
 //Import Swiper 
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper';
+import { Navigation, Pagination } from 'swiper';
 //css Card 
 
 import CardStyle from './../breadcumbs/css/productCard.css'
@@ -15,6 +15,8 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 
 const ProductCard = () => {
     const { id } = useParams()
@@ -45,8 +47,10 @@ const ProductCard = () => {
                     <Swiper
                         spaceBetween={0}
                         slidesPerView={1}
-                        modules={[Navigation]}
+                        modules={[Navigation, Pagination]}
                         navigation
+                        pagination
+                        
                     >
                         <SwiperSlide><img src={product.img1} alt="" /></SwiperSlide>
                         <SwiperSlide><img src={product.img2} alt="" /></SwiperSlide>

@@ -13,19 +13,19 @@ const ProductSwiper1 = () => {
           modules={[Navigation]}
           navigation
           breakpoints={{
-          1920: {
-            slidesPerView: 6
-          },
-          640: {
-            width: 640,
-            slidesPerView: 2,
-          },
-          768: {
-            width: 768,
-            slidesPerView: 3,
-          },
-          
-        }}
+            1920: {
+              width: 1920,
+              slidesPerView: 6,
+            },
+            640: {
+              width: 640,
+              slidesPerView: 2,
+            },
+            320: {
+              width: 320,
+              slidesPerView: 2,
+            },
+          }}
       >
         {
 

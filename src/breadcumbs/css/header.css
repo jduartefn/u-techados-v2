@@ -16,11 +16,7 @@
     z-index:3;
 }
 
-.header.fixed {
-    position: fixed;
-    z-index: 5;
-    top: 0;
-}
+
 
 .header-wrapper {
     padding: 0 1% 0 1%;
@@ -164,7 +160,20 @@ a {
     align-items: center;
 }
 
+@media (min-width:1024px) {
+    .header.fixed {
+        position: fixed;
+        z-index: 5;
+        top: 0;
+    }
+}
+
 @media (max-width:1023px) {
+    .header.fixed {
+        position:fixed;
+        top:0;
+
+    }
     .header .links ul {
         display: none;
     }
@@ -211,7 +220,7 @@ a {
         position: fixed;
         left: 0;
         right: 0;
-        top: 8%;
+        top: 66px;
         width: 300px;
         background: white;
         color: black;

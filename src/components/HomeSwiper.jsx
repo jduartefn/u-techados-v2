@@ -1,10 +1,11 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import swiper from '../breadcumbs/css/swiper.css'
-import {  Pagination,  } from 'swiper';
+import {  Pagination, EffectFade } from 'swiper';
 
 
 //Swiper CSS
 import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
 import 'swiper/css';
 // Icons
 import { FaWhatsapp } from 'react-icons/fa';
@@ -15,8 +16,9 @@ const HomeSwiper = () => {
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
-        modules={[Pagination]}
+        modules={[Pagination,EffectFade]}
         pagination
+        effect="fade"
         
 
       >

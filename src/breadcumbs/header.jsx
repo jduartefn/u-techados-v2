@@ -26,13 +26,6 @@ const Header = () => {
         }
     }
 
-  
-
-    
-   
-
-
-
     return (
         <div className="header">
 
@@ -50,10 +43,7 @@ const Header = () => {
                                         <Link to="/">Home</Link>
                                     </li>
                                     <li>
-                                        <Link to="/catalogo">Catalogo</Link>
-                                    </li>
-                                    <li>
-                                        <a>Page 1</a>
+                                        <Link to="/catalogo">Catalogo </Link>
                                     </li>
                                 </ul>
                             </div>
