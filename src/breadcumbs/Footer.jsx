@@ -2,7 +2,7 @@
 
 import FooterStyle from './css/footer.css';
 import React, { useRef } from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import Logo from './../img/logo.png'
 import { AiOutlineMail } from 'react-icons/ai';
 const Footer = () => {
@@ -18,7 +18,7 @@ const Footer = () => {
 
         form.append(span);
        
-        
+    
         setTimeout(()=>{
             span.classList.add('hide');
         },2000)
