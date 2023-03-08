@@ -38,10 +38,9 @@ form input::placeholder {
 }
 
 .footer-content .logo img {
-    max-width:90px;
+    max-width:150px;
     height:auto;
-    background:white;
-    border-radius: 100%;
+    filter: invert(1);
 }
 .footer-content .logo {
     margin-bottom:30px;

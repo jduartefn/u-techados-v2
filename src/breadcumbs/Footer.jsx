@@ -63,7 +63,7 @@ const Footer = () => {
                         <div className="logo">
                             <img src={Logo} alt="" />
                         </div>
-                        <b>© Copyright 2023 / Uruguay Techados</b>
+                        <b>© Copyright 2023 / De Hierro y Madera</b>
                     </div>
                 </div>
 

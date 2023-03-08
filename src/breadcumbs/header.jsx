@@ -1,7 +1,7 @@
 import layout from './css/header.css';
 
 import Carrito from './../img/categorias/carrito.svg';
-import logo from './../img/logo.png'
+import logo from './../img/logo.svg'
 import { Link } from 'react-router-dom';
 import { FcMenu } from 'react-icons/fc';
 import React, { useEffect } from 'react';
