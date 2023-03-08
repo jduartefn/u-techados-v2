@@ -148,4 +148,8 @@ form input + input {
     .footer-content {
         margin-top:40px;
     }
+    .message-sended {
+        position:relative;
+        bottom:0;
+    }
 }

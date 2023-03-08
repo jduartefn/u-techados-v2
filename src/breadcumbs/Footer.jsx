@@ -11,7 +11,8 @@ const Footer = () => {
 
     const emailNotifaction =()=>{
         let form = document.getElementById('contact-mail');
-
+        let input = document.querySelectorAll('#contact-mail .input-value');
+      
         let span = document.createElement('span');
         span.classList.add('message-sended');
         span.textContent = `Tu mensaje ha sido enviado con exito`;
@@ -24,6 +25,10 @@ const Footer = () => {
         },2000)
         setTimeout(()=>{
             span.remove();
+            input.forEach( input =>{
+                input.value= "";
+            });
+            
         },3000)
     }
 
@@ -50,9 +55,9 @@ const Footer = () => {
                     </div>
                   
                     <form id="contact-mail" ref={form} onSubmit={sendEmail}>
-                        <input type="text" placeholder="Nombre completo" name='user_name' required />
-                        <input type="text" placeholder="Mail" name='user_email' required />
-                        <input type="text" placeholder="mensaje" name='message' required />
+                        <input type="text" placeholder="Nombre completo" name='user_name' class="input-value" required />
+                        <input type="text" placeholder="Mail" name='user_email' class="input-value" required />
+                        <input type="text" placeholder="mensaje" name='message' class="input-value" required />
                         <input type="submit" id="btnEnviar" value='Enviar'/>
 
                     </form>
