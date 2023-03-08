@@ -2,7 +2,7 @@
 
 import FooterStyle from './css/footer.css';
 import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import emailjs from 'emailjs-com';
 import Logo from './../img/logo.png'
 import { AiOutlineMail } from 'react-icons/ai';
 const Footer = () => {
