@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/u-techados/static/css/main.d8f7352f.css",
+    "main.js": "/u-techados/static/js/main.c820bf4c.js",
+    "static/js/787.5fc07b1f.chunk.js": "/u-techados/static/js/787.5fc07b1f.chunk.js",
+    "static/media/techado-middle-2.jpg": "/u-techados/static/media/techado-middle-2.b87dc0ee94c81ca6b182.jpg",
+    "static/media/logo.png": "/u-techados/static/media/logo.98c0931ca108726bdb35.png",
+    "static/media/logo.svg": "/u-techados/static/media/logo.657c138945d7245bc60bf08053e31686.svg",
+    "static/media/sillas.svg": "/u-techados/static/media/sillas.0855cf9cc7431635a726a839ee94029b.svg",
+    "static/media/carrito.svg": "/u-techados/static/media/carrito.c1337a7f8db6e6947389b40efa2651e1.svg",
+    "static/media/techos.svg": "/u-techados/static/media/techos.81e7d47031ad670e6056434c1b6cdb0d.svg",
+    "index.html": "/u-techados/index.html",
+    "static/media/mesas.svg": "/u-techados/static/media/mesas.2ea0751c2c26a46b09e2bbad29e9c457.svg",
+    "main.d8f7352f.css.map": "/u-techados/static/css/main.d8f7352f.css.map",
+    "main.c820bf4c.js.map": "/u-techados/static/js/main.c820bf4c.js.map",
+    "787.5fc07b1f.chunk.js.map": "/u-techados/static/js/787.5fc07b1f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d8f7352f.css",
+    "static/js/main.c820bf4c.js"
+  ]
+}
