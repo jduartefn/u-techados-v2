@@ -403,9 +403,18 @@ span.swiper-pagination-bullet {
 }
 
 
-@media (max-width:380px) {
+@media (max-width:520px) {
     .sub-info h3 {
         font-size: 14px
+    }
+    .principal-banner .info {
+        margin-bottom:12px;
+    }
+    .info h1 {
+        font-size:20px;
+    }
+    .info h4 {
+        font-size:15px;
     }
 
     .sub-info b {
@@ -416,5 +425,15 @@ span.swiper-pagination-bullet {
         height: 100%;
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+}
+
+
+@media (max-width:380px) {
+    .info h1 {
+        font-size:14px;
+    }
+    .info h4 {
+        font-size: 12px
     }
 }
