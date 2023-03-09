@@ -10,6 +10,7 @@ import 'swiper/css';
 // Icons
 import { FaWhatsapp } from 'react-icons/fa';
 import imgBanner from "./../img/principal-banner.jpg"
+import imgBannerMobile from "./../img/mobile-banner.jpg"
 const HomeSwiper = () => {
   return (
     <div className="principal-swiper">
@@ -29,7 +30,8 @@ const HomeSwiper = () => {
               <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ipsa ratione, dolores quasi sapiente id.</h4>
               <a className="btn-banner" href="">lorem arreder</a>
             </div>
-            <img className="img-contianer" src={imgBanner} alt="" /> 
+            <img className="img-contianer desktop" src={imgBanner} alt="" /> 
+            <img className="img-container mobile" src={imgBannerMobile} alt="" />
           </div>
           </SwiperSlide>
       </Swiper>

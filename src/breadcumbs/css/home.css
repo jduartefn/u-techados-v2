@@ -204,6 +204,16 @@ span.swiper-pagination-bullet {
 }
 
 @media (min-width:1024px) {
+
+    .principal-banner .mobile {
+        display: none;
+    }
+
+    .principal-banner .desktop {
+        display: block;
+    }
+
+
     .principal-banner .principal-first .info {
         box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
     }
@@ -217,18 +227,18 @@ span.swiper-pagination-bullet {
         max-width: max-content;
         padding: 20px;
         border-radius: 5px;
-        color:var(--white);
-        padding:40px;
+        color: var(--white);
+        padding: 40px;
     }
 
     .info h1 {
-        font-size:3em;
+        font-size: 3em;
     }
 
     .info h4 {
-        max-width:720px;
-        font-size:1.5em;
-        line-height:1.5;
+        max-width: 720px;
+        font-size: 1.5em;
+        line-height: 1.5;
     }
 
     .screw {
@@ -310,15 +320,41 @@ span.swiper-pagination-bullet {
     .principal-banner {
         display: flex;
         flex-direction: column-reverse;
+        position: relative;
+    }
+
+    .principal-banner .info {
+        position: absolute;
+        z-index: 2;
+        margin-bottom: 35px;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.4);
+        color: white;
+        max-width: 80%;
+    }
+
+    .btn-banner {
+        padding: 10px 10px;
+        font-size: 12px;
+        display: block;
+        max-width: max-content;
+    }
+
+    .principal-banner .mobile {
+        display: block;
+    }
+
+    .principal-banner .desktop {
+        display: none;
     }
 
     .info h1 {
-        font-size:1.5em;
+        font-size: 1.5em;
     }
 
     .info h4 {
-        font-size:1em;
-        line-height:1.5;
+        font-size: 1em;
+        line-height: 1.5;
     }
 
     .principal-banner .info {
