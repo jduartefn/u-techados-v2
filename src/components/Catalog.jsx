@@ -1,31 +1,34 @@
-import react from 'react';
+//JSX
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
+//JS
 import productos from './../js/productos';
+
 import { FiFilter } from 'react-icons/fi'
+import { FaCheck } from 'react-icons/fa'
+
 //CSS
 import catalogStyle from './../breadcumbs/css/catalog.css';
+
 //JS
 import ShowFilters from './../js/ShowFilters';
-const filters = (event) => {
-    let button = event.target;
-    let product = document.querySelectorAll('.product-container');
-    let match = button.getAttribute('data');
-
-    product.forEach(producto => {
-
-        let filteredParent = producto.parentElement;
-        let filteredNode = filteredParent.querySelectorAll(`.product-container[category=${match}]`);
-        producto.classList.toggle('hide');
-
-        filteredNode.forEach(product => {
-            product.classList.remove('hide');
-        })
-
-    })
 
 
-}
 const ProductCatalog = () => {
+
+    const [filteredProducts, setFilteredProducts] = useState(productos);
+
+
+    const handleFilterChange = (filterValue) => {
+        if (filterValue === "all") {
+            setFilteredProducts(productos);
+        }
+        else {
+            const filtered = productos.filter((product) => product.category === filterValue);
+            setFilteredProducts(filtered);
+        }
+    }
 
     return (
         <div className="catalog-wrapper" id='content'>
@@ -37,8 +40,9 @@ const ProductCatalog = () => {
                 <div className="sidebar-wrapper">
                     <div className="filter-column">
                         <h4> Filtros </h4>
-                        <button data="techado" onClick={(filters)}>Techados </button>
-                        <button data="hogar" onClick={(filters)}>Hogar </button>
+                        <button onClick={() => handleFilterChange('hogar')}>Hogar </button>
+                        <button onClick={() => handleFilterChange('techado')}>Techado</button>
+                        <button onClick={() => handleFilterChange('all')}>Todos</button>
                     </div>
 
                 </div>
@@ -48,12 +52,17 @@ const ProductCatalog = () => {
             <div className="catalog-container">
 
                 <div className="filter-wrapper">
-                    <h4>Categorias</h4>
+                    <h4>Muebles</h4>
 
                     <div id="category-container">
-                        <button data="techado" onClick={(filters)}>Techados </button>
-                        <button data="hogar" onClick={(filters)}>Hogar </button>
+                        <button onClick={() => handleFilterChange('hogar')}>Hogar </button>
+                        <button onClick={() => handleFilterChange('techado')}>Techado</button>
+                        <button onClick={() => handleFilterChange('all')}>Todos</button>
+                    </div>
+                    <h4>Diseños</h4>
 
+                    <div id="category-container">
+                        <button data="techado" onClick={() => handleFilterChange('lamparas')}>Lamparas <FaCheck /></button>
                     </div>
                 </div>
                 <div className="filter-popup">
@@ -61,8 +70,9 @@ const ProductCatalog = () => {
                         <div className="menu-mobile side-bar" id="menuMobile">
                             <div className="mobile-wrapper">
                                 <div className='mobile-links'>
-                                    <button data="techado" onClick={(filters)}>Mesas </button>
-                                    <button data="hogar" onClick={(filters)}>Sillas </button>
+                                <button onClick={() => handleFilterChange('hogar')}>Hogar</button>
+                        <button onClick={() => handleFilterChange('techado')}>Techado</button>
+                        <button onClick={() => handleFilterChange('all')}>Todos</button>
                                 </div>
                             </div>
                         </div>
@@ -74,7 +84,7 @@ const ProductCatalog = () => {
 
 
                         {
-                            productos.map((producto) => {
+                            filteredProducts.map((producto) => {
                                 return <div className="product-container" key={producto.id} category={producto.category}>
                                     <img src={producto.img1} alt="img-product" />
                                     <div className="catalog-info">

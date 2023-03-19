@@ -55,9 +55,9 @@ const Footer = () => {
                     </div>
                   
                     <form id="contact-mail" ref={form} onSubmit={sendEmail}>
-                        <input type="text" placeholder="Nombre completo" name='user_name' class="input-value" required />
-                        <input type="text" placeholder="Mail" name='user_email' class="input-value" required />
-                        <input type="text" placeholder="mensaje" name='message' class="input-value" required />
+                        <input type="text" placeholder="Nombre completo" name='user_name' className="input-value" required />
+                        <input type="text" placeholder="Mail" name='user_email' className="input-value" required />
+                        <input type="text" placeholder="mensaje" name='message' className="input-value" required />
                         <input type="submit" id="btnEnviar" value='Enviar'/>
 
                     </form>
