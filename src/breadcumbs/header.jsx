@@ -45,6 +45,12 @@ const Header = () => {
                                     <li>
                                         <Link to="/catalogo">Catalogo </Link>
                                     </li>
+                                    <li>
+                                        <Link to="/catalogo">Muebles </Link>
+                                    </li>
+                                    <li>
+                                    <Link to="/catalogo?category=hogar">Hogar</Link>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
