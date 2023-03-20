@@ -31,9 +31,10 @@ const ProductCatalog = () => {
         }
         else {
             newFilters.category = filterValue;
+            
         }
         const stringified = queryString.stringify(newFilters);
-        navigate(`/catalogo?${stringified ? `${stringified}` : ''}`)
+        navigate(`/catalogo?${stringified ? `${stringified}` : ''}`);
     };
     //antes de cargar los productos
     React.useEffect(() => {

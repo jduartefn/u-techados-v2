@@ -93,7 +93,7 @@
     font-size: 1em;
     font-weight: bold;
     background: unset;
-    margin: 5px 0 5px 0;
+    margin: 5px 0 10px 0;
     transition: 0.3s ease;
     cursor: pointer;
 }
