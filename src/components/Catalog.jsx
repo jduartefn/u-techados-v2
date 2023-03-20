@@ -1,6 +1,7 @@
 //JSX
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import queryString from 'query-string';
 
 //JS
 import productos from './../js/productos';
@@ -18,17 +19,27 @@ import ShowFilters from './../js/ShowFilters';
 const ProductCatalog = () => {
 
     const [filteredProducts, setFilteredProducts] = useState(productos);
+    const { search } = useLocation();
+    const navigate = useNavigate();
+    const filters = queryString.parse(search);
 
 
     const handleFilterChange = (filterValue) => {
+        let newFilters = { ...filters };
         if (filterValue === "all") {
-            setFilteredProducts(productos);
+            delete newFilters.category;
         }
         else {
-            const filtered = productos.filter((product) => product.category === filterValue);
-            setFilteredProducts(filtered);
+            newFilters.category = filterValue;
         }
-    }
+        const stringified = queryString.stringify(newFilters);
+        navigate(`/catalogo?${stringified ? `${stringified}` : ''}`)
+    };
+    //antes de cargar los productos
+    React.useEffect(() => {
+        const filtered = filters.category !== undefined ? productos.filter((product) => product.category === filters.category) : productos;
+        setFilteredProducts(filtered);
+    }, [filters.category]);
 
     return (
         <div className="catalog-wrapper" id='content'>
@@ -70,9 +81,9 @@ const ProductCatalog = () => {
                         <div className="menu-mobile side-bar" id="menuMobile">
                             <div className="mobile-wrapper">
                                 <div className='mobile-links'>
-                                <button onClick={() => handleFilterChange('hogar')}>Hogar</button>
-                        <button onClick={() => handleFilterChange('techado')}>Techado</button>
-                        <button onClick={() => handleFilterChange('all')}>Todos</button>
+                                    <button onClick={() => handleFilterChange('hogar')}>Hogar</button>
+                                    <button onClick={() => handleFilterChange('techado')}>Techado</button>
+                                    <button onClick={() => handleFilterChange('all')}>Todos</button>
                                 </div>
                             </div>
                         </div>

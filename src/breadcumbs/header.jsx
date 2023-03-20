@@ -61,19 +61,24 @@ const Header = () => {
                             <li>
                                 <Link to="/">Home</Link>
                             </li>
-                            <li id="drop-down" class="dropdown-catalogo">
+                            <li>
                                 <Link to="/catalogo">Catalogo</Link>
+                            </li>
+                            <li id="drop-down" className="dropdown-catalogo">
+                                <Link to="/catalogo">Muebles</Link>
                                 <ul>
                                     <li>
-                                        <a href="/">Techos</a>
-                                    </li>
-                                    <li>
-                                        <a href="/">Muebles de hogar</a>
+                                    <Link to="/catalogo?category=hogar">Hogar</Link>
                                     </li>
                                 </ul>
                             </li>
-                            <li>
-                                <a>Page 1</a>
+                            <li id="drop-down" className="dropdown-catalogo">
+                                <Link to="/catalogo">Diseños</Link>
+                                <ul>
+                                    <li>
+                                    <Link to="/catalogo?category=lamparas">Lamparas</Link>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>

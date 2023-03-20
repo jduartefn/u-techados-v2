@@ -17,6 +17,32 @@
 }
 
 
+.dropdown-catalogo ul .title {
+    font-weight:bold;
+    text-transform:uppercase;
+    position:relative;
+    width:max-content;
+    font-size:16px;
+    
+}
+
+.dropdown-catalogo ul {
+    font-size:15px;
+}
+
+.dropdown-catalogo ul .title::after {
+    content:'';
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:5px;
+    height:3px;
+    min-width:100%;
+    width:max-content;
+    background:var(--brown);
+    
+}
+
 
 .header-wrapper {
     padding: 0 1% 0 1%;
