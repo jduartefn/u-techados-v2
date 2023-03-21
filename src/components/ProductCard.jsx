@@ -41,7 +41,7 @@ const ProductCard = () => {
     })
 
     return (
-        <div className="card-wrapper">
+        <div className="card-wrapper" id="product">
             <div className="card-container">
                 <div className="product-img">
                     <Swiper
