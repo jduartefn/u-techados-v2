@@ -17,6 +17,25 @@
 
 .ico svg {
     font-size:5em;
-  
 }
 
+.go-back svg {
+    font-size: 2em;
+    padding-left:10px;
+}
+
+.go-back {
+    color: var(--brown);
+    display: flex;
+    align-items: center;
+}
+
+.go-back {
+    text-decoration: none;
+    transition:0.3s ease;
+}
+
+.go-back:hover {
+    opacity:0.8;
+    text-decoration:underline;
+}
