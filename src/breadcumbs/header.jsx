@@ -46,10 +46,10 @@ const Header = () => {
                                         <Link to="/catalogo">Catalogo </Link>
                                     </li>
                                     <li>
-                                        <Link to="/catalogo">Muebles </Link>
+                                        <Link to="/catalogo?category=muebles">Muebles </Link>
                                     </li>
                                     <li>
-                                    <Link to="/catalogo?category=hogar">Hogar</Link>
+                                    <Link to="/catalogo?category=lamparas">Diseños</Link>
                                     </li>
                                 </ul>
                             </div>
