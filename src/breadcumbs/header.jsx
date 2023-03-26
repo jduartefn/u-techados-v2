@@ -10,8 +10,8 @@ import { ToggleClass } from './../js/ToggleClass';
 const Header = () => {
     useEffect(() => {
         window.addEventListener("scroll", isFixed);
-    })
-
+    });
+    
     const isFixed = () => {
         let header = document.querySelector('.header');
         const scrollTop = window.scrollY;

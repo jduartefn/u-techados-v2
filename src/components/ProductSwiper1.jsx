@@ -42,7 +42,7 @@ const ProductSwiper1 = () => {
                     <Link to={`/productos/${product.id}`}>
                       {product.title}
                     </Link>
-                  <span>{product.description}</span>
+                  <span>{product.previewDescription}</span>
                 </div>
               </div>
             </SwiperSlide>

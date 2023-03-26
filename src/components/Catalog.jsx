@@ -11,7 +11,6 @@ import { FaCheck } from 'react-icons/fa'
 
 //CSS
 import catalogStyle from './../breadcumbs/css/catalog.css';
-
 //JS
 import ShowFilters from './../js/ShowFilters';
 
@@ -23,7 +22,6 @@ const ProductCatalog = () => {
     const navigate = useNavigate();
     const filters = queryString.parse(search);
 
-
     const handleFilterChange = (filterValue) => {
         let newFilters = { ...filters };
         if (filterValue === "all") {
@@ -31,11 +29,12 @@ const ProductCatalog = () => {
         }
         else {
             newFilters.category = filterValue;
-            
+
         }
         const stringified = queryString.stringify(newFilters);
         navigate(`/catalogo?${stringified ? `${stringified}` : ''}`);
     };
+
     //antes de cargar los productos
     React.useEffect(() => {
         const filtered = filters.category !== undefined ? productos.filter((product) => product.category === filters.category) : productos;
@@ -48,13 +47,16 @@ const ProductCatalog = () => {
             <div className="filter-mobile">
                 <button onClick={ShowFilters}><FiFilter /> Filtrar catalogo </button>
             </div>
-            <div className="filter sidebar">
+            <div className='filter sidebar'>
                 <div className="sidebar-wrapper">
                     <div className="filter-column">
                         <h4> Filtros </h4>
-                        <button onClick={() => handleFilterChange('hogar')}>Hogar </button>
-                        <button onClick={() => handleFilterChange('techado')}>Techado</button>
-                        <button onClick={() => handleFilterChange('all')}>Todos</button>
+                        <b>Hogar: </b>
+                        <button onClick={() => handleFilterChange('mesas')}>Mesas </button>
+                        <button onClick={() => handleFilterChange('sillas')}>Sillas</button>
+                        <b>Diseños:</b>
+                        <button onClick={() => handleFilterChange('lamparas')}>Lamparas </button>
+                        <button id="verTodos" onClick={() => handleFilterChange('all')}>Quitar filtros</button>
                     </div>
 
                 </div>
@@ -67,29 +69,16 @@ const ProductCatalog = () => {
                     <h4>Muebles</h4>
 
                     <div id="category-container">
-                        <button onClick={() => handleFilterChange('hogar')}>Hogar </button>
-                        <button onClick={() => handleFilterChange('techado')}>Techado</button>
-                        <button onClick={() => handleFilterChange('all')}>Todos</button>
+                        <button onClick={() => handleFilterChange('mesas')}>Mesas </button>
+                        <button onClick={() => handleFilterChange('sillas')}>Sillas</button>
                     </div>
                     <h4>Diseños</h4>
 
                     <div id="category-container">
-                        <button data="techado" onClick={() => handleFilterChange('lamparas')}>Lamparas <FaCheck /></button>
+                        <button data="techado" onClick={() => handleFilterChange('lamparas')}>Lamparas </button>
                     </div>
                 </div>
-                <div className="filter-popup">
-                    <div className="menu-mobile-wrapper">
-                        <div className="menu-mobile side-bar" id="menuMobile">
-                            <div className="mobile-wrapper">
-                                <div className='mobile-links'>
-                                    <button onClick={() => handleFilterChange('hogar')}>Hogar</button>
-                                    <button onClick={() => handleFilterChange('techado')}>Techado</button>
-                                    <button onClick={() => handleFilterChange('all')}>Todos</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 <>
 
                     <div className="product-grid">
@@ -103,7 +92,7 @@ const ProductCatalog = () => {
                                         <Link to={`/productos/${producto.id}`}>
                                             {producto.title}
                                         </Link>
-                                        <span>{producto.description}</span>
+                                        <span>{producto.previewDescription}</span>
                                     </div>
 
                                 </div>

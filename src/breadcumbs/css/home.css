@@ -8,6 +8,11 @@ body:has(.home-wrapper) {
     margin: 0 auto;
     background: var(--white);
     padding: 1%;
+    width:100%;
+}
+
+.home-content {
+    width:100%;
 }
 
 .product-wrapper {
