@@ -381,7 +381,9 @@ span.swiper-pagination-bullet {
         font-size: 30px;
     }
 
-
+    .home-wrapper {
+        max-width:100%;
+    }
 
     .middle-info {
         padding: 7px 0;
